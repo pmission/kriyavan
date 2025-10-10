@@ -1,0 +1,21 @@
+{
+  "name": "Kriyavan",
+  "short_name": "Kriyavan",
+  "description": "Messages from Kriya Yoga Masters",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#FF9933",
+  "theme_color": "#FF9933",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
