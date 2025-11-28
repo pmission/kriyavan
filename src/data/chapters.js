@@ -1,0 +1,20 @@
+export const CHAPTERS_DATA = [
+  { id: 1, sanskrit: "Arjuna Vishada Yoga", translation: "The Yoga of Dejection", summary: "Arjuna faces the paralysis of fear and doubt on the battlefield of life.", mood: ["Confusion", "Fear", "Doubt"] },
+  { id: 2, sanskrit: "Sankhya Yoga", translation: "The Yoga of Analytical Knowledge", summary: "The soul is eternal and the body is temporary; the call to rise above grief.", mood: ["Grief", "Anxiety", "Death"] },
+  { id: 3, sanskrit: "Karma Yoga", translation: "The Yoga of Action", summary: "Why performing one's duty without attachment is superior to inaction.", mood: ["Laziness", "Procrastination"] },
+  { id: 4, sanskrit: "Jnana Karma Sanyasa Yoga", translation: "The Yoga of Knowledge", summary: "The history of the Gita and how spiritual wisdom burns away the reactions of karma.", mood: ["Seeking Truth"] },
+  { id: 5, sanskrit: "Karma Sanyasa Yoga", translation: "The Yoga of Renunciation", summary: "How to live in the world without being of the world, like a lotus leaf in water.", mood: ["Stress"] },
+  { id: 6, sanskrit: "Dhyana Yoga", translation: "The Yoga of Meditation", summary: "Mastering the turbulent mind to discover the divinity within.", mood: ["Restlessness", "Focus"] },
+  { id: 7, sanskrit: "Jnana Vijnana Yoga", translation: "The Yoga of Wisdom and Realization", summary: "Seeing the energy of the Divine in all aspects of material nature.", mood: ["Curiosity"] },
+  { id: 8, sanskrit: "Akshara Brahma Yoga", translation: "The Yoga of the Imperishable Brahman", summary: "Understanding the life cycle and how to leave the body at the moment of death.", mood: ["Aging", "Mortality"] },
+  { id: 9, sanskrit: "Raja Vidya Guhya Yoga", translation: "The Yoga of the King of Knowledge", summary: "The most confidential secret: the power of pure, loving devotion.", mood: ["Devotion", "Love"] },
+  { id: 10, sanskrit: "Vibhuti Yoga", translation: "The Yoga of Divine Glories", summary: "Recognizing God's magnificence in the wonders of the universe.", mood: ["Awe", "Inspiration"] },
+  { id: 11, sanskrit: "Vishvarupa Darshana Yoga", translation: "The Yoga of the Universal Form", summary: "Arjuna is granted divine vision to see the terrifying and beautiful Cosmic Form.", mood: ["Humility"] },
+  { id: 12, sanskrit: "Bhakti Yoga", translation: "The Yoga of Devotion", summary: "The path of love is revealed as the most direct way to reach the Supreme.", mood: ["Loneliness", "Love"] },
+  { id: 13, sanskrit: "Kshetra Kshetrajna Vibhaga Yoga", translation: "The Yoga of Distinction", summary: "Distinguishing between the Field (the body) and the Knower of the Field (the soul).", mood: ["Identity"] },
+  { id: 14, sanskrit: "Gunatraya Vibhaga Yoga", translation: "The Yoga of the Three Modes", summary: "How Goodness, Passion, and Ignorance control human behavior and happiness.", mood: ["Mood Swings", "Habits"] },
+  { id: 15, sanskrit: "Purushottama Yoga", translation: "The Yoga of the Supreme Person", summary: "The analogy of the inverted Banyan tree and the nature of the Supreme Being.", mood: ["Detachment"] },
+  { id: 16, sanskrit: "Daivasura Sampad Vibhaga Yoga", translation: "The Yoga of Divine and Demoniac Natures", summary: "Identifying the traits that lead to liberation versus those that lead to bondage.", mood: ["Ethics", "Morality"] },
+  { id: 17, sanskrit: "Shraddhatraya Vibhaga Yoga", translation: "The Yoga of the Three Divisions of Faith", summary: "How our food, speech, austerity, and charity reflect our consciousness.", mood: ["Lifestyle", "Health"] },
+  { id: 18, sanskrit: "Moksha Sanyasa Yoga", translation: "The Yoga of Liberation", summary: "The final conclusion: abandoning all varieties of religion to surrender completely to the Divine.", mood: ["Purpose", "Liberation"] }
+];
