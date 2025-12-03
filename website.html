@@ -1,1 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prajnana Mission — Inauguration</title>
+  <meta name="description" content="Inauguration page for Prajnana Mission" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#2b6cb0; /* deep blue */
+      --gold:#f4a261; /* warm accent */
+      --bg:#fcfbf8;
+      --card:#ffffff;
+      color-scheme: light;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#fff);}
+    .container{max-width:960px;margin:40px auto;padding:24px}
+    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;text-align:center}
+    .logo{width:120px;height:120px;margin:0 auto;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#4c9bd6);color:white;box-shadow:0 8px 30px rgba(43,108,176,.15)}
+    h1{font-family:'Libre Baskerville',serif;font-size:2.2rem;margin:0;color:var(--accent)}
+    p.lead{margin:8px 0 0;color:#444;font-size:1.05rem}
+
+    .card{background:var(--card);border-radius:12px;padding:18px;margin-top:16px;box-shadow:0 6px 24px rgba(45,50,60,.06)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    .countdown{font-weight:600;font-size:1.35rem;color:var(--accent)}
+
+    .btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-outline{border:2px solid var(--accent);color:var(--accent);background:transparent}
+
+    form input,form textarea{width:100%;padding:10px;border:1px solid #e6e6e6;border-radius:8px;font-size:0.95rem}
+    form label{font-size:0.85rem;color:#333;margin-bottom:6px;display:block}
+    footer{margin-top:28px;text-align:center;color:#666;font-size:0.9rem}
+
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <div class="logo" aria-hidden="true">
+        <strong style="font-size:28px;letter-spacing:1px">PM</strong>
+      </div>
+      <h1>Prajnana Mission — Inauguration</h1>
+      <p class="lead">A sanctuary of the Bhagavad Gita’s light — joining hearts, learning, and service.</p>
+    </div>
+
+    <div class="card">
+      <div class="grid">
+        <div>
+          <h2 style="margin-top:0">Join our Inauguration Ceremony</h2>
+          <p style="color:#444">We are delighted to announce the inauguration of <strong>www.prajnanamission.org</strong>. This page is the online gathering place for the mission's teachings, events and community.</p>
+
+          <p class="countdown" id="countdown">Preparing details...</p>
+
+          <div style="margin-top:14px">
+            <a class="btn btn-primary" id="rsvpBtn" href="#rsvp">RSVP / Contact</a>
+            <a class="btn btn-outline" href="#about" style="margin-left:8px">Learn More</a>
+          </div>
+
+          <section id="about" style="margin-top:18px">
+            <h3 style="margin-bottom:8px">About Prajnana Mission</h3>
+            <p style="margin:0;color:#444">Prajnana Mission shares the timeless wisdom of the Bhagavad Gita through study, practice, and compassionate service. This site will host talks, articles, resources and ways to connect.</p>
+          </section>
+
+          <section style="margin-top:16px">
+            <h3 style="margin-bottom:8px">Live Stream & Venue</h3>
+            <p style="margin:0;color:#444">Details about the venue, schedule and streaming links will be published here. If you'd like to be notified, please RSVP below.</p>
+          </section>
+        </div>
+
+        <aside>
+          <h3 style="margin-top:0">RSVP / Contact</h3>
+          <form id="rsvp" class="rsvp-form" onsubmit="submitRSVP(event)">
+            <label for="name">Name</label>
+            <input id="name" required placeholder="Your full name" />
+
+            <label for="email" style="margin-top:8px">Email</label>
+            <input id="email" type="email" required placeholder="you@example.com" />
+
+            <label for="message" style="margin-top:8px">Message (optional)</label>
+            <textarea id="message" rows="4" placeholder="Any note or question"></textarea>
+
+            <div style="margin-top:10px;text-align:right">
+              <button class="btn btn-primary" type="submit">Send RSVP</button>
+            </div>
+          </form>
+
+          <div style="margin-top:16px;font-size:0.95rem;color:#555">
+            <strong>Quick contacts</strong>
+            <p style="margin:6px 0">Email: <a href="mailto:info@prajnanamission.org">info@prajnanamission.org</a></p>
+            <p style="margin:6px 0">Follow: <a href="#">Facebook</a> · <a href="#">YouTube</a></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <footer>
+      © Prajnana Mission — <span id="year"></span>. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // Simple countdown placeholder: set an inauguration date here (UTC)
+    // Edit this date to the actual inauguration date in the format: YYYY, M-1, D, H, M, S
+    const inaugurationDate = new Date(Date.UTC(2026, 0, 1, 0, 0, 0)); // Jan 1, 2026 UTC (example)
+
+    function updateCountdown(){
+      const now = new Date();
+      const diff = inaugurationDate.getTime() - now.getTime();
+      const el = document.getElementById('countdown');
+      if(diff <= 0){ el.textContent = 'The inauguration is live — welcome!'; return; }
+      const days = Math.floor(diff/ (1000*60*60*24));
+      const hours = Math.floor((diff/ (1000*60*60)) % 24);
+      const minutes = Math.floor((diff/ (1000*60)) % 60);
+      const seconds = Math.floor((diff/1000) % 60);
+      el.textContent = `${days} days · ${hours} hrs · ${minutes} mins · ${seconds} secs until inauguration`;
+    }
+    setInterval(updateCountdown,1000); updateCountdown();
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple RSVP handling (demo) — replace with real endpoint or mailto as needed
+    function submitRSVP(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      // For demo we'll open mail client with prefilled content
+      const subject = encodeURIComponent('Prajnana Mission — Inauguration RSVP');
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+      window.location.href = `mailto:info@prajnanamission.org?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
 
