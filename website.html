@@ -1,55 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prajnana Mission - Website Inauguration</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        h1 {
-            color: #4CAF50; /* A green color for significance */
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-        .date {
-            font-weight: bold;
-            color: #FF5722; /* An orange color for emphasis */
-            margin-top: 20px;
-            display: block;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <h1>🎉 Prajnana Mission Website Inauguration! 🎉</h1>
-        <p>We are delighted to announce the official inauguration of our website:</p>
-        <p>
-            <a href="http://www.prajnanamission.org" target="_blank">
-                <strong>www.prajnanamission.org</strong>
-            </a>
-        </p>
-        <p>
-            Join us in celebrating this milestone as we launch our digital platform to share our mission and connect with the community.
-        </p>
-        <span class="date">More updates coming soon!</span>
+
+<body class="bg-white text-gray-800">
+
+<!-- ======================= HEADER ======================= -->
+<header class="w-full fixed top-0 left-0 bg-white shadow z-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="logo.png" alt="Logo" class="h-10 w-auto">
+        <span class="font-bold text-xl">Your Brand</span>
+      </div>
+
+      <!-- Navigation (Desktop) -->
+      <nav class="hidden md:flex items-center space-x-6 font-medium">
+        <a href="#" class="hover:text-blue-600">Home</a>
+        <a href="#" class="hover:text-blue-600">About</a>
+        <a href="#" class="hover:text-blue-600">Programs</a>
+        <a href="#" class="hover:text-blue-600">Gallery</a>
+        <a href="#" class="hover:text-blue-600">Contact</a>
+      </nav>
+
+      <!-- Right Side: Language + Search -->
+      <div class="hidden md:flex items-center space-x-4">
+
+        <!-- Language Selector -->
+        <select class="border rounded px-2 py-1 text-sm">
+          <option>EN</option>
+          <option>HI</option>
+          <option>OD</option>
+        </select>
+
+        <!-- Search Icon -->
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button class="md:hidden" id="mobileMenuBtn">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
     </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white shadow">
+    <ul class="flex flex-col space-y-2 p-4 font-medium">
+      <li><a href="#" class="block py-2">Home</a></li>
+      <li><a href="#" class="block py-2">About</a></li>
+      <li><a href="#" class="block py-2">Programs</a></li>
+      <li><a href="#" class="block py-2">Gallery</a></li>
+      <li><a href="#" class="block py-2">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+
+<!-- SPACER (for fixed header) -->
+<div class="h-16"></div>
+
+
+
+<!-- ======================= HERO SECTION ======================= -->
+<section class="w-full min-h-screen grid 
+    grid-cols-1 
+    md:grid-cols-[1.25fr_1.5fr_1.25fr]">
+
+  <!-- LEFT IMAGE -->
+  <div class="h-64 md:h-auto bg-gray-300 bg-cover bg-center"
+       style="background-image:url('left-image.jpg');"></div>
+
+  <!-- CENTER HERO -->
+  <div class="flex flex-col justify-center items-center p-6">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 text-center">Your Hero Title</h1>
+    <p class="text-lg md:text-xl text-center max-w-lg">
+      Professional and responsive hero layout with image grid on the right.
+    </p>
+  </div>
+
+  <!-- RIGHT IMAGE GRID -->
+  <div class="grid grid-rows-2">
+
+    <!-- TOP 6 SQUARE IMAGES -->
+    <div class="grid grid-cols-3 grid-rows-2">
+      <div class="aspect-square border bg-cover bg-center" style="background-image:url('img1.jpg');"></div>
+      <div class="aspect-square border bg-cover bg-center" style="background-image:url('img2.jpg');"></div>
+      <div class="aspect-square border bg-cover bg-center" style="background-image:url('img3.jpg');"></div>
+      <div class="aspect-square border bg-cover bg-center" style="background-image:url('img4.jpg');"></div>
+      <div class="aspect-square border bg-cover bg-center" style="background-image:url('img5.jpg');"></div>
+      <div class="aspect-square border bg-cover bg-center" style="background-image:url('img6.jpg');"></div>
+    </div>
+
+    <!-- BOTTOM LARGE IMAGE -->
+    <div class="border bg-gray-300 bg-cover bg-center h-48 md:h-auto"
+         style="background-image:url('bottom-big.jpg');"></div>
+
+  </div>
+</section>
+
+
+
+<!-- ======================= SIMPLE JS FOR MOBILE MENU ======================= -->
+<script>
+  const btn = document.getElementById("mobileMenuBtn");
+  const menu = document.getElementById("mobileMenu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+
 </body>
 </html>
